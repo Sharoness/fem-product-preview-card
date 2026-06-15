@@ -11,6 +11,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Product preview card component</title>
 
@@ -19,6 +25,42 @@
       body {
         background-color: antiquewhite;
         padding: 10px;
+      }
+
+      .montserrat-font {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: 500; */
+        /* font-weight: 700; */
+        font-style: normal;
+        color: hsl(228, 12%, 48%);
+      }
+
+      .medium-font {
+        font-weight: 500;
+      }
+
+      .bold-font {
+        font-weight: 700;
+      }
+
+      .fraunces-font {
+        font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings: "SOFT" 0, "WONK" 0;
+      }
+
+      .sub-title {
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      .title {
+        font-size: 32px;
+        color: hsl(212, 21%, 14%);
+        margin: 20px 0px;
       }
 
       img {
@@ -39,6 +81,22 @@
         padding: 25px;
       }
 
+      .prices {
+        display: flex;
+        align-items: center;
+        margin: 20px 0px;
+      }
+
+      .price {
+        font-size: 32px;
+        color: hsl(158, 36%, 37%);
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        margin-left: 20px;
+      }
+
       .attribution {
         font-size: 0.6875rem;
         text-align: center;
@@ -56,16 +114,16 @@
           alt="Photo of the perfume bottle"
         />
       </div>
-      <div id="content">
-        <div>Perfume</div>
-        <div>Gabrielle Essence Eau De Parfum</div>
+      <div id="content" class="montserrat-font">
+        <div class="sub-title">Perfume</div>
+        <div class="fraunces-font title">Gabrielle Essence Eau De Parfum</div>
         <div>
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </div>
-        <div>
-          <div>$149.99</div>
-          <div>$169.99</div>
+        <div class="prices">
+          <div class="fraunces-font price">$149.99</div>
+          <div class="old-price">$169.99</div>
         </div>
         <button>Add to Cart</button>
       </div>

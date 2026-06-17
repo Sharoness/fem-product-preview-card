@@ -20,7 +20,6 @@
 
     <title>Frontend Mentor | Product preview card component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       body {
         background-color: hsl(30, 38%, 92%);
@@ -30,8 +29,6 @@
       .montserrat-font {
         font-family: "Montserrat", sans-serif;
         font-optical-sizing: auto;
-        /* font-weight: 500; */
-        /* font-weight: 700; */
         font-style: normal;
         color: hsl(228, 12%, 48%);
       }
@@ -118,6 +115,36 @@
         cursor: pointer;
       }
 
+      @media (min-width: 700px) {
+        body {
+          padding: 0;
+          height: 100vh;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #body {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          height: 500px;
+          width: 600px;
+          margin: auto;
+        }
+
+        #content {
+          width: 300px;
+        }
+
+        .product-img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
       .attribution {
         font-size: 0.6875rem;
         text-align: center;
@@ -130,11 +157,17 @@
   <body>
     <div id="body">
       <div>
-        <img
-          src="images/image-product-mobile.jpg"
-          alt="Photo of the perfume bottle"
-          class="product-img"
-        />
+        <picture>
+          <source
+            media="(min-width: 700px)"
+            srcset="images/image-product-desktop.jpg"
+          />
+          <img
+            src="images/image-product-mobile.jpg"
+            alt="Photo of the perfume bottle"
+            class="product-img"
+          />
+        </picture>
       </div>
       <div id="content" class="montserrat-font">
         <div class="sub-title">Perfume</div>
